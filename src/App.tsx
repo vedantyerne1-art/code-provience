@@ -466,25 +466,25 @@ ${files
   return (
     <div className="min-h-screen bg-stone-900 text-stone-100 flex flex-col font-sans selection:bg-amber-500/30 selection:text-amber-200">
       {/* Top Header */}
-      <header className="border-b border-stone-800 bg-stone-950/90 backdrop-blur px-6 py-3.5 flex items-center justify-between">
+      <header className="border-b border-stone-800 bg-stone-950/90 backdrop-blur px-4 sm:px-6 py-3.5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 sm:gap-0">
         <div className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded-md bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 font-mono text-sm font-semibold">
+          <div className="w-8 h-8 rounded-md bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 font-mono text-sm font-semibold shrink-0">
             CP
           </div>
           <div>
-            <h1 className="text-sm font-semibold tracking-tight text-stone-100 flex items-center gap-2">
+            <h1 className="text-sm font-semibold tracking-tight text-stone-100 flex flex-wrap items-center gap-2">
               Code Provenance Tracker
               <span className="text-[11px] font-normal uppercase tracking-wider px-2 py-0.5 rounded bg-emerald-500/10 border border-emerald-500/20 text-emerald-400">
                 Interactive Playground
               </span>
             </h1>
-            <p className="text-xs text-stone-400">
+            <p className="text-xs text-stone-400 mt-1 sm:mt-0">
               Live Code Editor, Typing & Paste Detection, Cryptographic Hash Chain, and Attestation Gatekeeper
             </p>
           </div>
         </div>
 
-        <div className="flex items-center gap-3">
+        <div className="flex flex-wrap items-center gap-3 w-full sm:w-auto">
           <div className="flex items-center gap-2 text-xs font-mono text-stone-400 bg-stone-900/80 px-3 py-1.5 rounded-lg border border-stone-800">
             <span className="w-2 h-2 rounded-full bg-emerald-400"></span>
             <span>{files.length} Files</span>
@@ -923,8 +923,8 @@ ${files
                 </div>
 
                 {/* Per-File Table */}
-                <div className="border border-stone-800 rounded-lg overflow-hidden">
-                  <table className="w-full text-left text-xs font-mono">
+                <div className="border border-stone-800 rounded-lg overflow-x-auto">
+                  <table className="w-full min-w-[500px] text-left text-xs font-mono">
                     <thead className="bg-stone-900/80 border-b border-stone-800 text-stone-400 text-[11px] uppercase tracking-wider">
                       <tr>
                         <th className="p-3">Tracked File</th>

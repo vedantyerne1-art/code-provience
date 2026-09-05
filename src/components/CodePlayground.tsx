@@ -678,9 +678,9 @@ export const CodePlayground: React.FC<CodePlaygroundProps> = ({
       )}
 
       {/* Top Workspace Bar: File Tabs + Active Language Selector + CI Gatekeeper */}
-      <div className="flex flex-wrap items-center justify-between gap-3 p-3 rounded-xl border border-stone-800 bg-stone-950">
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 p-3 rounded-xl border border-stone-800 bg-stone-950">
         {/* File Tabs */}
-        <div className="flex items-center gap-1.5 overflow-x-auto">
+        <div className="flex items-center gap-1.5 overflow-x-auto w-full md:w-auto pb-1 md:pb-0">
           {files.map((file) => {
             const langDef = file.language ? getLanguageById(file.language) : detectLanguageFromPath(file.path);
             const fileValidation = validateCodeForLanguage(file.content, file.language);
