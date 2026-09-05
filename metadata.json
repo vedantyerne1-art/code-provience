@@ -1,0 +1,6 @@
+{
+  "name": "Code Provenance Tracker",
+  "description": "VS Code extension that records code origin (typed, pasted, AI) with Git notes and tamper-evident hash chains.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

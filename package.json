@@ -1,0 +1,123 @@
+{
+  "name": "code-provenance-tracker",
+  "displayName": "Code Provenance Tracker",
+  "description": "Records how code was created (typed, pasted, AI) with Git notes and tamper-evident hash chains.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "Code Provenance Tracker",
+      "properties": {
+        "provenance.supportedLanguages": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            "javascript",
+            "python",
+            "java",
+            "cpp",
+            "typescript",
+            "rust",
+            "go",
+            "csharp",
+            "sql"
+          ],
+          "description": "Programming languages actively tracked by Code Provenance Tracker. Non-whitelisted languages suspend tracking."
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "provenance.helloWorld",
+        "title": "Provenance: Hello World"
+      },
+      {
+        "command": "provenance.toggleHeatmap",
+        "title": "Provenance: Toggle Heatmap"
+      },
+      {
+        "command": "provenance.saveGitNote",
+        "title": "Provenance: Save Git Note"
+      },
+      {
+        "command": "provenance.showGitNote",
+        "title": "Provenance: Show Git Note"
+      },
+      {
+        "command": "provenance.verifyChain",
+        "title": "Provenance: Verify Hash Chain"
+      },
+      {
+        "command": "provenance.generateReport",
+        "title": "Provenance: Generate Provenance Report"
+      },
+      {
+        "command": "provenance.exportAttestation",
+        "title": "Provenance: Export Attestation Bundle"
+      },
+      {
+        "command": "provenance.installPreCommitHook",
+        "title": "Provenance: Install Git Pre-Commit Hook"
+      },
+      {
+        "command": "provenance.runCode",
+        "title": "Provenance: Run and Analyze Code"
+      },
+      {
+        "command": "provenance.pushToGitHub",
+        "title": "Provenance: Push Code and Records to Remote"
+      },
+      {
+        "command": "provenance.exportReport",
+        "title": "Provenance: Export Detailed Report"
+      },
+      {
+        "command": "provenance.generateCI",
+        "title": "Provenance: Generate CI/CD Gatekeeper"
+      },
+      {
+        "command": "provenance.sealRepository",
+        "title": "Provenance: Generate Final Repository Seal"
+      }
+    ]
+  },
+  "scripts": {
+    "dev": "vite --port=3000 --host=0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview",
+    "clean": "rm -rf dist server.js",
+    "test": "node --test",
+    "lint": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@google/genai": "^2.4.0",
+    "@tailwindcss/vite": "^4.1.14",
+    "@vitejs/plugin-react": "^5.0.4",
+    "lucide-react": "^0.546.0",
+    "react": "^19.0.1",
+    "react-dom": "^19.0.1",
+    "vite": "^6.2.3",
+    "express": "^4.21.2",
+    "dotenv": "^17.2.3",
+    "motion": "^12.23.24"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "autoprefixer": "^10.4.21",
+    "esbuild": "^0.25.0",
+    "tailwindcss": "^4.1.14",
+    "tsx": "^4.21.0",
+    "typescript": "~5.8.2",
+    "vite": "^6.2.3",
+    "@types/express": "^4.17.21"
+  }
+}
